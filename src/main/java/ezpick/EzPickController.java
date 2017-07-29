@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("ezpick")
-public class EzPickRestControler {
+public class EzPickController {
     @GetMapping
     public String index(){
         return "index";
