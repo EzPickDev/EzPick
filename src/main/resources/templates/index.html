@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1"/>
     <title>EzPic</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" href="/slick/slick.css" th:href="@{/slick/slick.css}" />
+    <link rel="stylesheet" href="/slick/slick-theme.css" th:href="@{/slick/slick-theme.css}"/>
+    <style>
+        /*左右の矢印の色を変える*/
+        .slick-prev:before,
+        .slick-next:before {
+            color: #000;
+        }
+        /*左右の矢印の位置を変える*/
+        .slick-next {
+            right: 20px;
+            z-index: 99;
+        }
+        .slick-prev {
+             left: 15px;
+            z-index: 100;
+        }
+        /*スライド数のドットの色を変える*/
+        .slick-dots li.slick-active button:before,
+        .slick-dots li button:before {
+            color: red;
+        }
+        .item-box{
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -25,50 +51,150 @@
 <!-- Contents -->
 <div style="padding-top:50px;">
     <div>
-        <h3 style="height:800px;"><a href="#">YouTube</a></h3>
-        <div class="multiple-items">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-        </div>
+        <h3><a href="#">YouTube</a></h3>
+        <ul class="slider">
+            <li><div class="item-box">1</div></li>
+            <li><div class="item-box">2</div></li>
+            <li><div class="item-box">3</div></li>
+            <li><div class="item-box">4</div></li>
+            <li><div class="item-box">5</div></li>
+            <li><div class="item-box">6</div></li>
+            <li><div class="item-box">7</div></li>
+            <li><div class="item-box">8</div></li>
+            <li><div class="item-box">9</div></li>
+            <li><div class="item-box">10</div></li>
+            <li><div class="item-box">11</div></li>
+            <li><div class="item-box">12</div></li>
+            <li><div class="item-box">13</div></li>
+            <li><div class="item-box">14</div></li>
+            <li><div class="item-box">15</div></li>
+        </ul>
     </div>
     <hr/>
     <div>
         <h3><a href="#">Instagram</a></h3>
-        <section>
-        </section>
+        <ul class="slider">
+            <li><div class="item-box">1</div></li>
+            <li><div class="item-box">2</div></li>
+            <li><div class="item-box">3</div></li>
+            <li><div class="item-box">4</div></li>
+            <li><div class="item-box">5</div></li>
+            <li><div class="item-box">6</div></li>
+            <li><div class="item-box">7</div></li>
+            <li><div class="item-box">8</div></li>
+            <li><div class="item-box">9</div></li>
+            <li><div class="item-box">10</div></li>
+            <li><div class="item-box">11</div></li>
+            <li><div class="item-box">12</div></li>
+            <li><div class="item-box">13</div></li>
+            <li><div class="item-box">14</div></li>
+            <li><div class="item-box">15</div></li>
+        </ul>
     </div>
     <hr/>
     <div>
         <h3><a href="#">Qiita</a></h3>
-        <section>
-        </section>
+        <ul class="slider">
+            <li><div class="item-box">1</div></li>
+            <li><div class="item-box">2</div></li>
+            <li><div class="item-box">3</div></li>
+            <li><div class="item-box">4</div></li>
+            <li><div class="item-box">5</div></li>
+            <li><div class="item-box">6</div></li>
+            <li><div class="item-box">7</div></li>
+            <li><div class="item-box">8</div></li>
+            <li><div class="item-box">9</div></li>
+            <li><div class="item-box">10</div></li>
+            <li><div class="item-box">11</div></li>
+            <li><div class="item-box">12</div></li>
+            <li><div class="item-box">13</div></li>
+            <li><div class="item-box">14</div></li>
+            <li><div class="item-box">15</div></li>
+        </ul>
     </div>
     <hr/>
     <div>
         <h3><a href="#">FaceBook</a></h3>
-        <section>
-        </section>
+        <ul class="slider">
+            <li><div class="item-box">1</div></li>
+            <li><div class="item-box">2</div></li>
+            <li><div class="item-box">3</div></li>
+            <li><div class="item-box">4</div></li>
+            <li><div class="item-box">5</div></li>
+            <li><div class="item-box">6</div></li>
+            <li><div class="item-box">7</div></li>
+            <li><div class="item-box">8</div></li>
+            <li><div class="item-box">9</div></li>
+            <li><div class="item-box">10</div></li>
+            <li><div class="item-box">11</div></li>
+            <li><div class="item-box">12</div></li>
+            <li><div class="item-box">13</div></li>
+            <li><div class="item-box">14</div></li>
+            <li><div class="item-box">15</div></li>
+        </ul>
     </div>
     <hr/>
     <div>
         <h3><a href="#">iTunes</a></h3>
-        <section>
-        </section>
+        <ul class="slider">
+            <li><div class="item-box">1</div></li>
+            <li><div class="item-box">2</div></li>
+            <li><div class="item-box">3</div></li>
+            <li><div class="item-box">4</div></li>
+            <li><div class="item-box">5</div></li>
+            <li><div class="item-box">6</div></li>
+            <li><div class="item-box">7</div></li>
+            <li><div class="item-box">8</div></li>
+            <li><div class="item-box">9</div></li>
+            <li><div class="item-box">10</div></li>
+            <li><div class="item-box">11</div></li>
+            <li><div class="item-box">12</div></li>
+            <li><div class="item-box">13</div></li>
+            <li><div class="item-box">14</div></li>
+            <li><div class="item-box">15</div></li>
+        </ul>
     </div>
     <hr/>
     <div>
         <h3><a href="#">Twitter</a></h3>
-        <section>
-        </section>
+        <ul class="slider">
+            <li><div class="item-box">1</div></li>
+            <li><div class="item-box">2</div></li>
+            <li><div class="item-box">3</div></li>
+            <li><div class="item-box">4</div></li>
+            <li><div class="item-box">5</div></li>
+            <li><div class="item-box">6</div></li>
+            <li><div class="item-box">7</div></li>
+            <li><div class="item-box">8</div></li>
+            <li><div class="item-box">9</div></li>
+            <li><div class="item-box">10</div></li>
+            <li><div class="item-box">11</div></li>
+            <li><div class="item-box">12</div></li>
+            <li><div class="item-box">13</div></li>
+            <li><div class="item-box">14</div></li>
+            <li><div class="item-box">15</div></li>
+        </ul>
     </div>
     <hr/>
     <div>
         <h3><a href="#">Flickr</a></h3>
-        <section>
-        </section>
+        <ul class="slider">
+            <li><div class="item-box">1</div></li>
+            <li><div class="item-box">2</div></li>
+            <li><div class="item-box">3</div></li>
+            <li><div class="item-box">4</div></li>
+            <li><div class="item-box">5</div></li>
+            <li><div class="item-box">6</div></li>
+            <li><div class="item-box">7</div></li>
+            <li><div class="item-box">8</div></li>
+            <li><div class="item-box">9</div></li>
+            <li><div class="item-box">10</div></li>
+            <li><div class="item-box">11</div></li>
+            <li><div class="item-box">12</div></li>
+            <li><div class="item-box">13</div></li>
+            <li><div class="item-box">14</div></li>
+            <li><div class="item-box">15</div></li>
+        </ul>
     </div>
     <hr/>
 </div>
@@ -77,17 +203,30 @@
 <footer>
 </footer>
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script type="text/javascript" src="/slick/slick.min.js" th:src="@{/slick/slick.min.js}"></script>
 <script>
-    $(function(){
-       $('.multiple-items').slick({
-           infinite: true,
-           slidesToShow: 3,
-           slidesToScroll: 3
-       });
+    $(function() {
+        $('.slider').slick({
+          infinite: true,
+          slidesToShow: 7,
+          slidesToScroll: 7,
+          responsive: [{
+               breakpoint: 768,
+                    settings: {
+                         slidesToShow: 3,
+                         slidesToScroll: 3,
+               }
+          },{
+               breakpoint: 480,
+                    settings: {
+                         slidesToShow: 2,
+                         slidesToScroll: 2,
+                    }
+               }
+          ]
+     });
     });
 </script>
 </body>
